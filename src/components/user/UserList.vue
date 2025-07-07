@@ -10,7 +10,7 @@ const showPasswordDialog = ref(false);
 const fetchUsers = async () => {
     try {
         const response = await userList();
-        users.value = response;
+        users.value = response.users;
     } catch (error) {
         console.error(error);
     }

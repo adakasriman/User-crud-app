@@ -2,8 +2,10 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import UserList from '../components/user/UserList.vue';
+import { logout } from '../stores/auth';
 const router = useRouter();
 const handleLogout = () => {
+  logout();
   router.push('/login');
 };
 </script>
